@@ -54,8 +54,11 @@ def remove_background(image: Image):
         providers=['CPUExecutionProvider']
     )
 
-if __name__ == "__main__":
+def main():
     clip_image = get_image_from_clipboard()
     removed = remove_background(clip_image)
     write_image_to_clipboard(removed)
     notify_send("Background removed and copied to clipboard")
+
+if __name__ == "__main__":
+    main()

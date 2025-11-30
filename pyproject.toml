@@ -15,6 +15,8 @@ dependencies = [
 [tool.poetry]
 packages = [{include = "rembgclipboard", from = "src"}]
 
+[tool.poetry.scripts]
+rembgclipboard = "src.rembgclipboard.app:main"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
