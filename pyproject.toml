@@ -1,19 +1,15 @@
-[project]
+[tool.poetry]
 name = "rembgclipboard"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "Nick Friday",email = "nickjfriday@gmail.com"}
-]
+authors = ["Nick Friday <nickjfriday@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.12"
-dependencies = [
-    "rembg (>=2.0.68,<3.0.0)",
-    "onnxruntime (>=1.23.2,<2.0.0)",
-]
-
-[tool.poetry]
 packages = [{include = "rembgclipboard", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+rembg = "^2.0.68"
+onnxruntime = "^1.23.2"
 
 [tool.poetry.scripts]
 rembgclipboard = "src.rembgclipboard.app:main"
